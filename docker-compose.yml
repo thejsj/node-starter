@@ -1,5 +1,13 @@
 version: '2'
 services:
+  db2:
+    image: redis
+     links:
+      - 'db'
+      - 'db:some-weird-host'
+      - 'web:three-changing-the-weird-host'
+    ports:
+      - "6379:6379"
   db:
     image: mongo
     ports:
