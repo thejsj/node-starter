@@ -2,7 +2,7 @@ version: '2'
 services:
   db2:
     image: redis
-     links:
+    links:
       - 'db'
       - 'db:some-weird-host'
       - 'web:three-changing-the-weird-host'
